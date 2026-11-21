@@ -1,4 +1,4 @@
-"""Rebuild the fictional fixture. No random seed, network, or current date used."""
+"""Rebuild fictional records with named business examples; no live business data."""
 
 import json
 from datetime import date, timedelta
@@ -10,10 +10,10 @@ ROOT = Path(__file__).resolve().parent
 
 def generate_dataset():
     suppliers = [
-        {"supplier_id": "SUP-A", "supplier_label": "Supplier Alpha"},
-        {"supplier_id": "SUP-B", "supplier_label": "Supplier Beta"},
-        {"supplier_id": "SUP-C", "supplier_label": "Supplier Gamma"},
-        {"supplier_id": "SUP-D", "supplier_label": "Supplier Delta"},
+        {"supplier_id": "SUP-A", "supplier_label": "Staccato Bakery"},
+        {"supplier_id": "SUP-B", "supplier_label": "Abstinence Spirits"},
+        {"supplier_id": "SUP-C", "supplier_label": "Grow The Earth"},
+        {"supplier_id": "SUP-D", "supplier_label": "Good Four Season Trading"},
     ]
     orders = []
     base = date(2026, 8, 25)
@@ -72,9 +72,18 @@ def generate_dataset():
         })
     return {
         "metadata": {
-            "dataset": "Fictional purchase orders for a portfolio reporting exercise",
+            "dataset": "Fictional purchase orders with named business examples for a portfolio reporting exercise",
             "version": 1,
-            "provenance": "Independent AI-assisted portfolio extension; no employer data",
+            "provenance": "Independent AI-assisted portfolio extension; public business names, no employer or client operational data",
+            "data_notice": "Named business examples; all orders, amounts, dates and delivery metrics are fictional.",
+            "business_context": "Staccato Bakery, Abstinence Spirits and Grow The Earth appear in SupplyBistro's Cornell Marketplace network listings. SupplyBistro describes Good Four Season Trading as an early business partner and discovery source; Cornell affiliation is not established for that business.",
+            "attribution_scope": "Names are demonstration labels only. These records do not show actual client financial impact, business performance or work Ziana Bennett performed for any named business.",
+            "business_context_document": "../docs/business-context.md",
+            "public_context_sources": [
+                "https://supplybistro.com/smith-family-business-initiative/",
+                "https://www.cornellmarketplace.com/",
+                "https://www.linkedin.com/company/supplybistro",
+            ],
             "generation": "Deterministic arithmetic fixture plus twelve explicit boundary cases",
             "grain": "One row per purchase order",
             "default_period_start": "2026-09-01",
@@ -90,5 +99,5 @@ if __name__ == "__main__":
     target = ROOT / "data" / "synthetic_purchase_orders.json"
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps(generate_dataset(), indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote 72 fictional orders to {target.relative_to(ROOT)}")
+    print(f"Wrote 72 fictional orders with named business examples to {target.relative_to(ROOT)}")
 

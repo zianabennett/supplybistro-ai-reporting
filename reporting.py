@@ -9,6 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
+DATA_NOTICE = "Named business examples; all orders, amounts, dates and delivery metrics are fictional."
 ORDER_FIELDS = (
     "order_id", "supplier_id", "order_date", "promised_date", "received_date",
     "cancelled_date", "order_value_cents", "currency",
@@ -122,7 +123,10 @@ def build_reports(dataset, period_start="2026-09-01", period_end="2026-10-01", a
             "period_end_is_exclusive": True,
             "dataset_order_count": len(dataset["orders"]),
             "currency": "USD",
-            "source": "Independent fictional portfolio exercise",
+            "source": "Independent portfolio demonstration with public business names and fictional operational records",
+            "data_notice": DATA_NOTICE,
+            "attribution_scope": "The public names are illustrative labels, not actual client financial impact or evidence that Ziana Bennett worked with each business.",
+            "business_context_document": "../docs/business-context.md",
         },
         "supplier_order_value": {
             "rows": value_rows,
@@ -146,21 +150,22 @@ def build_reports(dataset, period_start="2026-09-01", period_end="2026-10-01", a
 def svg_chart(title, subtitle, bars, unit, maximum=None):
     """Render exact computed values as a self-contained accessible SVG."""
     width = 960
-    height = 180 + max(1, len(bars)) * 64
-    left = 175
-    plot_width = 590
+    height = 204 + max(1, len(bars)) * 64
+    left = 280
+    plot_width = 500
     maximum = maximum if maximum is not None else max([bar[1] for bar in bars] + [1])
     description = "; ".join(f"{label}: {display}" for label, value, display in bars) or "No eligible orders"
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">',
         f'<title id="title">{html.escape(title)}</title>',
-        f'<desc id="desc">{html.escape(description)}</desc>',
+        f'<desc id="desc">{html.escape(DATA_NOTICE + " " + description)}</desc>',
         '<rect width="100%" height="100%" rx="16" fill="#f6f8fb"/>',
         f'<text x="32" y="42" fill="#142b42" font-family="Arial, sans-serif" font-size="24" font-weight="700">{html.escape(title)}</text>',
         f'<text x="32" y="70" fill="#526479" font-family="Arial, sans-serif" font-size="14">{html.escape(subtitle)}</text>',
+        f'<text x="32" y="96" fill="#233b51" font-family="Arial, sans-serif" font-size="14" font-weight="700">{html.escape(DATA_NOTICE)}</text>',
     ]
     for index, (label, value, display) in enumerate(bars):
-        y = 106 + index * 64
+        y = 130 + index * 64
         bar_width = round(plot_width * value / maximum, 2) if maximum else 0
         parts.extend([
             f'<text x="32" y="{y+25}" fill="#233b51" font-family="Arial, sans-serif" font-size="15">{html.escape(label)}</text>',
@@ -169,7 +174,7 @@ def svg_chart(title, subtitle, bars, unit, maximum=None):
             f'<text x="{left+plot_width+18}" y="{y+25}" fill="#142b42" font-family="Arial, sans-serif" font-size="15" font-weight="700">{html.escape(display)}</text>',
         ])
     if not bars:
-        parts.append('<text x="32" y="135" fill="#526479" font-family="Arial, sans-serif" font-size="16">No eligible orders for this report.</text>')
+        parts.append('<text x="32" y="159" fill="#526479" font-family="Arial, sans-serif" font-size="16">No eligible orders for this report.</text>')
     parts.append(f'<text x="32" y="{height-22}" fill="#526479" font-family="Arial, sans-serif" font-size="12">{html.escape(unit)} · Fictional portfolio data</text>')
     parts.append('</svg>')
     return "\n".join(parts) + "\n"
@@ -183,6 +188,7 @@ def render_summary(results):
     rate = "Unavailable" if delivery["on_time_rate_pct"] is None else f'{delivery["on_time_rate_pct"]:.2f}%'
     lines = [
         "# Reporting results", "", "[Project overview](../README.md) · [Machine-readable results](report_results.json)", "",
+        f"**{DATA_NOTICE}** These figures do not describe the named businesses' actual finances or delivery performance. [Read the business context and source distinctions](../docs/business-context.md).", "",
         f"Period **{context['period_start']} to {context['period_end']}**, with the end date excluded. Snapshot **{context['as_of']}**. The complete fixture contains **{context['dataset_order_count']} fictional orders**.", "",
         "## Measures", "",
         "| Measure | Computed result |", "| --- | ---: |",
@@ -194,25 +200,25 @@ def render_summary(results):
         f"| Received on time | {delivery['on_time_order_count']} |",
         f"| On-time delivery rate | {rate} |", "",
         "The order-value measure uses booking date. The delivery measure uses receipt date. The overdue report uses the snapshot date and includes older open orders, regardless of the selected reporting month.", "",
-        "## Purchase order value by supplier", "",
-        "![Purchase order value by supplier](supplier_order_value.svg)", "",
-        "| Supplier | Orders | Order value |", "| --- | ---: | ---: |",
+        "## Fictional purchase order value by named example", "",
+        "![Fictional purchase order value by named business example](supplier_order_value.svg)", "",
+        "| Named business example | Fictional orders | Fictional order value |", "| --- | ---: | ---: |",
     ]
     for row in values["rows"]:
         lines.append(f"| {row['supplier_label']} | {row['order_count']} | {money(row['order_value_cents'])} |")
     if not values["rows"]:
         lines.append("| No qualifying orders | 0 | $0.00 |")
-    lines.extend(["", "## Open overdue orders", "", "| Order | Supplier | Promised date | Days overdue | Order value |", "| --- | --- | --- | ---: | ---: |"])
+    lines.extend(["", "## Fictional open overdue orders", "", "| Fictional order | Named business example | Fictional promised date | Days overdue | Fictional order value |", "| --- | --- | --- | ---: | ---: |"])
     for row in overdue["rows"]:
         lines.append(f"| {row['order_id']} | {row['supplier_label']} | {row['promised_date']} | {row['days_overdue']} | {money(row['order_value_cents'])} |")
     if not overdue["rows"]:
         lines.append("| No overdue orders | — | — | — | $0.00 |")
-    lines.extend(["", "## On-time delivery", "", "![On-time delivery by supplier](delivery_performance.svg)", "", "| Supplier | Received | On time | Rate |", "| --- | ---: | ---: | ---: |"])
+    lines.extend(["", "## Fictional on-time delivery", "", "![Fictional on-time delivery by named business example](delivery_performance.svg)", "", "| Named business example | Fictional receipts | Fictional on-time receipts | Fictional rate |", "| --- | ---: | ---: | ---: |"])
     for row in delivery["rows"]:
         lines.append(f"| {row['supplier_label']} | {row['received_order_count']} | {row['on_time_order_count']} | {row['on_time_rate_pct']:.2f}% |")
     if not delivery["rows"]:
         lines.append("| No eligible receipts | 0 | 0 | Unavailable |")
-    lines.extend(["", "The overall rate is calculated from all eligible orders. It is not an average of supplier percentages. Suppliers with no receipts have no delivery rate and are omitted from that chart.", "", "## Reading the output", "", "These measures verify the behavior of a fictional reporting model. They are not company performance results. The ranked supplier values identify where a reviewer would start a purchasing discussion; the overdue list identifies orders to investigate. A business decision would also require operational context and validated real data.", "", "Regenerate this folder with `python3 run.py`. Its JSON, tables, and charts are produced from the same report objects.", ""])
+    lines.extend(["", "The overall rate is calculated from all eligible orders. It is not an average of supplier percentages. Suppliers with no receipts have no delivery rate and are omitted from that chart.", "", "## Reading the output", "", "These measures verify the behavior of a fictional reporting model. The named examples give the demonstration public business context; their amounts, rankings, overdue orders and delivery rates have no real-world performance meaning. They do not establish actual client financial impact or work Ziana Bennett performed for each business. In a real report, the value ranking and overdue list would guide investigation using validated operational data.", "", "Regenerate this folder with `python3 run.py`. Its JSON, tables, and charts are produced from the same report objects.", ""])
     return "\n".join(lines)
 
 
@@ -225,6 +231,6 @@ def write_outputs(results, output_directory):
     subtitle = f"{context['period_start']} to {context['period_end']} exclusive · Snapshot {context['as_of']}"
     value_bars = [(row["supplier_label"], row["order_value_cents"], money(row["order_value_cents"])) for row in results["supplier_order_value"]["rows"]]
     delivery_bars = [(row["supplier_label"], row["on_time_rate_pct"], f"{row['on_time_rate_pct']:.2f}%") for row in results["on_time_delivery"]["rows"]]
-    (output_directory / "supplier_order_value.svg").write_text(svg_chart("Purchase order value by supplier", subtitle, value_bars, "USD · Integer cents used in calculations"), encoding="utf-8")
-    (output_directory / "delivery_performance.svg").write_text(svg_chart("On-time delivery by supplier", subtitle, delivery_bars, "Percentage of eligible received orders · Scale 0 to 100%", maximum=100), encoding="utf-8")
+    (output_directory / "supplier_order_value.svg").write_text(svg_chart("Fictional purchase order value by named example", subtitle, value_bars, "USD · Integer cents used in calculations"), encoding="utf-8")
+    (output_directory / "delivery_performance.svg").write_text(svg_chart("Fictional on-time delivery by named example", subtitle, delivery_bars, "Percentage of eligible received orders · Scale 0 to 100%", maximum=100), encoding="utf-8")
 

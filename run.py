@@ -23,6 +23,7 @@ def main():
     values = results["supplier_order_value"]
     overdue = results["overdue_orders"]
     delivery = results["on_time_delivery"]
+    print(results["context"]["data_notice"])
     print(f"Purchase orders: {values['total_order_count']} | {money(values['total_order_value_cents'])}")
     print(f"Open overdue: {overdue['total_order_count']} | {money(overdue['total_order_value_cents'])}")
     display_rate = "unavailable" if delivery["on_time_rate_pct"] is None else f"{delivery['on_time_rate_pct']:.2f}%"

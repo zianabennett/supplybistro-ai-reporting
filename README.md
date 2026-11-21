@@ -6,6 +6,8 @@ At SupplyBistro, I worked on planning an AI-assisted reporting initiative. A key
 
 This repository develops that direction into an **independent AI-assisted portfolio extension**. The Python, SQL, documentation, and 72 fictional purchase orders were created for this exercise. They are not employer source code, company data, or evidence of a shipped SupplyBistro feature. The historical contribution is the planning context; the executable implementation is new portfolio work.
 
+**Named business examples; fictional records.** The public names below provide business context. All purchase orders, amounts, dates, overdue balances, and delivery metrics are invented for the demonstration. They do not describe actual client financial impact or establish that I worked with each named business.
+
 ## My role and the original context
 
 **SupplyBistro · Product planning · 2026**
@@ -16,19 +18,30 @@ The report definitions, executable code, and synthetic results in this repositor
 
 [Portfolio overview](https://zianabennett.github.io/#work) · [Experience and leadership](https://zianabennett.github.io/#experience)
 
+## Named examples and public context
+
+| Stable demo ID | Named business example | What the public sources establish |
+| --- | --- | --- |
+| SUP-A | Staccato Bakery | Listed under Clients and Startups on SupplyBistro's Smith Family Business Initiative page and Cornell Marketplace |
+| SUP-B | Abstinence Spirits | Listed under Clients and Startups on those same two pages |
+| SUP-C | Grow The Earth | Listed under Clients and Startups on those same two pages |
+| SUP-D | Good Four Season Trading | Described by SupplyBistro on LinkedIn as an early business partner and discovery source; Cornell affiliation is not established |
+
+The first three examples come from the public Cornell Marketplace network listings. The fourth has a separately documented SupplyBistro connection. These names occupy illustrative supplier slots in the reporting model; the mapping does not document actual buying relationships or account activity. [Read the source links and exact distinctions](docs/business-context.md).
+
 ## What the project delivers
 
 Three reports answer concrete purchasing questions using a consistent set of business definitions. A small Python program loads the fictional data into an in-memory SQLite database and generates the JSON, readable tables, and charts below. It needs no external packages, account, or API key.
 
-| Report | Default September result | Decision it supports |
+| Report | Fictional September result | Decision it supports |
 | --- | --- | --- |
 | Purchase order value by supplier | 42 orders totaling **$112,956.48** | Where is purchase order value concentrated? |
 | Open overdue purchase orders | 9 orders totaling **$20,295.26** | Which outstanding orders need investigation? |
 | On-time delivery | 24 of 31 receipts, or **77.42%** | How reliably did received orders meet their promised dates? |
 
-These figures are calculated from the fictional model, using September 30, 2026 as the snapshot date. Purchase order value does not measure payments or revenue.
+These figures are calculated from the fictional model, using September 30, 2026 as the snapshot date. Every named business's order value and delivery rate is synthetic. Purchase order value does not measure payments or revenue.
 
-![Purchase order value by supplier](results/supplier_order_value.svg)
+![Fictional purchase order value by named business example](results/supplier_order_value.svg)
 
 [Read the complete results](results/summary.md) or inspect the [machine-readable output](results/report_results.json).
 
@@ -44,6 +57,7 @@ Amounts are stored as integer cents. The overall delivery rate uses the combined
 
 | Material | Purpose |
 | --- | --- |
+| [Business context and sources](docs/business-context.md) | Named examples, Cornell network listings, and the limits of the public evidence |
 | [Report requirements](docs/requirements.md) | Definitions and acceptance criteria |
 | [Decisions and roadmap](docs/decisions-and-roadmap.md) | Tradeoffs, historical scope, and next implementation questions |
 | [Method and data](docs/method.md) | Reproduction steps, event assumptions, and dataset design |
