@@ -1,0 +1,20 @@
+{
+  "dataset": "synthetic_purchase_orders.json",
+  "grain": "One record per fictional purchase order",
+  "currency": "USD",
+  "fields": [
+    {"name": "order_id", "type": "string", "nullable": false, "definition": "Unique nonempty purchase order identifier"},
+    {"name": "supplier_id", "type": "string", "nullable": false, "definition": "Identifier matching a record in the suppliers collection"},
+    {"name": "order_date", "type": "ISO calendar date", "nullable": false, "definition": "Booking date; determines the period for purchase order value"},
+    {"name": "promised_date", "type": "ISO calendar date", "nullable": false, "definition": "Promised receipt date; cannot precede order_date"},
+    {"name": "received_date", "type": "ISO calendar date", "nullable": true, "definition": "Single full receipt event; cannot precede order_date or coexist with cancelled_date"},
+    {"name": "cancelled_date", "type": "ISO calendar date", "nullable": true, "definition": "Single cancellation event; cannot precede order_date or coexist with received_date"},
+    {"name": "order_value_cents", "type": "integer", "nullable": false, "definition": "Nonnegative full order-level value in USD cents; not a payment or invoice measure"},
+    {"name": "currency", "type": "string", "nullable": false, "definition": "USD only in this model"}
+  ],
+  "date_convention": "YYYY-MM-DD; period_start inclusive, period_end exclusive, as_of inclusive",
+  "as_of_state": "Before order_date the order does not exist. By received_date it is received. By cancelled_date it is cancelled. Otherwise it is open.",
+  "empty_rate": "JSON null when there are no eligible received orders",
+  "provenance": "Independently generated fictional data; no employer data or schema"
+}
+

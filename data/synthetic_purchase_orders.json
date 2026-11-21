@@ -1,0 +1,752 @@
+{
+  "metadata": {
+    "dataset": "Fictional purchase orders for a portfolio reporting exercise",
+    "version": 1,
+    "provenance": "Independent AI-assisted portfolio extension; no employer data",
+    "generation": "Deterministic arithmetic fixture plus twelve explicit boundary cases",
+    "grain": "One row per purchase order",
+    "default_period_start": "2026-09-01",
+    "default_period_end_exclusive": "2026-10-01",
+    "default_as_of": "2026-09-30"
+  },
+  "suppliers": [
+    {
+      "supplier_id": "SUP-A",
+      "supplier_label": "Supplier Alpha"
+    },
+    {
+      "supplier_id": "SUP-B",
+      "supplier_label": "Supplier Beta"
+    },
+    {
+      "supplier_id": "SUP-C",
+      "supplier_label": "Supplier Gamma"
+    },
+    {
+      "supplier_id": "SUP-D",
+      "supplier_label": "Supplier Delta"
+    }
+  ],
+  "orders": [
+    {
+      "order_id": "PO001",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-08-25",
+      "promised_date": "2026-08-30",
+      "received_date": null,
+      "cancelled_date": null,
+      "order_value_cents": 57919,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO002",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-08-28",
+      "promised_date": "2026-09-03",
+      "received_date": "2026-09-03",
+      "cancelled_date": null,
+      "order_value_cents": 65838,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO003",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-08-31",
+      "promised_date": "2026-09-07",
+      "received_date": "2026-09-05",
+      "cancelled_date": null,
+      "order_value_cents": 73757,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO004",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-09-03",
+      "promised_date": "2026-09-11",
+      "received_date": "2026-09-14",
+      "cancelled_date": null,
+      "order_value_cents": 81676,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO005",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-09-06",
+      "promised_date": "2026-09-15",
+      "received_date": "2026-09-14",
+      "cancelled_date": null,
+      "order_value_cents": 89595,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO006",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-09-09",
+      "promised_date": "2026-09-19",
+      "received_date": null,
+      "cancelled_date": "2026-09-11",
+      "order_value_cents": 97514,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO007",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-09-12",
+      "promised_date": "2026-09-16",
+      "received_date": null,
+      "cancelled_date": null,
+      "order_value_cents": 105433,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO008",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-09-15",
+      "promised_date": "2026-09-20",
+      "received_date": "2026-09-20",
+      "cancelled_date": null,
+      "order_value_cents": 113352,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO009",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-09-18",
+      "promised_date": "2026-09-24",
+      "received_date": "2026-09-22",
+      "cancelled_date": null,
+      "order_value_cents": 121271,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO010",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-09-21",
+      "promised_date": "2026-09-28",
+      "received_date": "2026-10-01",
+      "cancelled_date": null,
+      "order_value_cents": 129190,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO011",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-09-24",
+      "promised_date": "2026-10-02",
+      "received_date": "2026-10-01",
+      "cancelled_date": null,
+      "order_value_cents": 137109,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO012",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-09-27",
+      "promised_date": "2026-10-06",
+      "received_date": null,
+      "cancelled_date": "2026-09-29",
+      "order_value_cents": 145028,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO013",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-09-30",
+      "promised_date": "2026-10-10",
+      "received_date": null,
+      "cancelled_date": null,
+      "order_value_cents": 152947,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO014",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-10-03",
+      "promised_date": "2026-10-07",
+      "received_date": "2026-10-07",
+      "cancelled_date": null,
+      "order_value_cents": 160866,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO015",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-10-06",
+      "promised_date": "2026-10-11",
+      "received_date": "2026-10-09",
+      "cancelled_date": null,
+      "order_value_cents": 168785,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO016",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-08-27",
+      "promised_date": "2026-09-02",
+      "received_date": "2026-09-05",
+      "cancelled_date": null,
+      "order_value_cents": 176704,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO017",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-08-30",
+      "promised_date": "2026-09-06",
+      "received_date": "2026-09-05",
+      "cancelled_date": null,
+      "order_value_cents": 184623,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO018",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-09-02",
+      "promised_date": "2026-09-10",
+      "received_date": null,
+      "cancelled_date": "2026-09-04",
+      "order_value_cents": 192542,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO019",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-09-05",
+      "promised_date": "2026-09-14",
+      "received_date": null,
+      "cancelled_date": null,
+      "order_value_cents": 200461,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO020",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-09-08",
+      "promised_date": "2026-09-18",
+      "received_date": "2026-09-18",
+      "cancelled_date": null,
+      "order_value_cents": 208380,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO021",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-09-11",
+      "promised_date": "2026-09-15",
+      "received_date": "2026-09-13",
+      "cancelled_date": null,
+      "order_value_cents": 216299,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO022",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-09-14",
+      "promised_date": "2026-09-19",
+      "received_date": "2026-09-22",
+      "cancelled_date": null,
+      "order_value_cents": 224218,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO023",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-09-17",
+      "promised_date": "2026-09-23",
+      "received_date": "2026-09-22",
+      "cancelled_date": null,
+      "order_value_cents": 232137,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO024",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-09-20",
+      "promised_date": "2026-09-27",
+      "received_date": null,
+      "cancelled_date": "2026-09-22",
+      "order_value_cents": 240056,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO025",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-09-23",
+      "promised_date": "2026-10-01",
+      "received_date": null,
+      "cancelled_date": null,
+      "order_value_cents": 247975,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO026",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-09-26",
+      "promised_date": "2026-10-05",
+      "received_date": "2026-10-05",
+      "cancelled_date": null,
+      "order_value_cents": 255894,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO027",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-09-29",
+      "promised_date": "2026-10-09",
+      "received_date": "2026-10-07",
+      "cancelled_date": null,
+      "order_value_cents": 263813,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO028",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-10-02",
+      "promised_date": "2026-10-06",
+      "received_date": "2026-10-09",
+      "cancelled_date": null,
+      "order_value_cents": 271732,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO029",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-10-05",
+      "promised_date": "2026-10-10",
+      "received_date": "2026-10-09",
+      "cancelled_date": null,
+      "order_value_cents": 279651,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO030",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-08-26",
+      "promised_date": "2026-09-01",
+      "received_date": null,
+      "cancelled_date": "2026-08-28",
+      "order_value_cents": 287570,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO031",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-08-29",
+      "promised_date": "2026-09-05",
+      "received_date": null,
+      "cancelled_date": null,
+      "order_value_cents": 295489,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO032",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-09-01",
+      "promised_date": "2026-09-09",
+      "received_date": "2026-09-09",
+      "cancelled_date": null,
+      "order_value_cents": 303408,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO033",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-09-04",
+      "promised_date": "2026-09-13",
+      "received_date": "2026-09-11",
+      "cancelled_date": null,
+      "order_value_cents": 311327,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO034",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-09-07",
+      "promised_date": "2026-09-17",
+      "received_date": "2026-09-20",
+      "cancelled_date": null,
+      "order_value_cents": 319246,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO035",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-09-10",
+      "promised_date": "2026-09-14",
+      "received_date": "2026-09-13",
+      "cancelled_date": null,
+      "order_value_cents": 327165,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO036",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-09-13",
+      "promised_date": "2026-09-18",
+      "received_date": null,
+      "cancelled_date": "2026-09-15",
+      "order_value_cents": 335084,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO037",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-09-16",
+      "promised_date": "2026-09-22",
+      "received_date": null,
+      "cancelled_date": null,
+      "order_value_cents": 343003,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO038",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-09-19",
+      "promised_date": "2026-09-26",
+      "received_date": "2026-09-26",
+      "cancelled_date": null,
+      "order_value_cents": 350922,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO039",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-09-22",
+      "promised_date": "2026-09-30",
+      "received_date": "2026-09-28",
+      "cancelled_date": null,
+      "order_value_cents": 358841,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO040",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-09-25",
+      "promised_date": "2026-10-04",
+      "received_date": "2026-10-07",
+      "cancelled_date": null,
+      "order_value_cents": 366760,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO041",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-09-28",
+      "promised_date": "2026-10-08",
+      "received_date": "2026-10-07",
+      "cancelled_date": null,
+      "order_value_cents": 374679,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO042",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-10-01",
+      "promised_date": "2026-10-05",
+      "received_date": null,
+      "cancelled_date": "2026-10-03",
+      "order_value_cents": 382598,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO043",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-10-04",
+      "promised_date": "2026-10-09",
+      "received_date": null,
+      "cancelled_date": null,
+      "order_value_cents": 390517,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO044",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-08-25",
+      "promised_date": "2026-08-31",
+      "received_date": "2026-08-31",
+      "cancelled_date": null,
+      "order_value_cents": 398436,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO045",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-08-28",
+      "promised_date": "2026-09-04",
+      "received_date": "2026-09-02",
+      "cancelled_date": null,
+      "order_value_cents": 406355,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO046",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-08-31",
+      "promised_date": "2026-09-08",
+      "received_date": "2026-09-11",
+      "cancelled_date": null,
+      "order_value_cents": 414274,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO047",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-09-03",
+      "promised_date": "2026-09-12",
+      "received_date": "2026-09-11",
+      "cancelled_date": null,
+      "order_value_cents": 422193,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO048",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-09-06",
+      "promised_date": "2026-09-16",
+      "received_date": null,
+      "cancelled_date": "2026-09-08",
+      "order_value_cents": 430112,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO049",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-09-09",
+      "promised_date": "2026-09-13",
+      "received_date": null,
+      "cancelled_date": null,
+      "order_value_cents": 438031,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO050",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-09-12",
+      "promised_date": "2026-09-17",
+      "received_date": "2026-09-17",
+      "cancelled_date": null,
+      "order_value_cents": 445950,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO051",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-09-15",
+      "promised_date": "2026-09-21",
+      "received_date": "2026-09-19",
+      "cancelled_date": null,
+      "order_value_cents": 453869,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO052",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-09-18",
+      "promised_date": "2026-09-25",
+      "received_date": "2026-09-28",
+      "cancelled_date": null,
+      "order_value_cents": 461788,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO053",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-09-21",
+      "promised_date": "2026-09-29",
+      "received_date": "2026-09-28",
+      "cancelled_date": null,
+      "order_value_cents": 469707,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO054",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-09-24",
+      "promised_date": "2026-10-03",
+      "received_date": null,
+      "cancelled_date": "2026-09-26",
+      "order_value_cents": 477626,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO055",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-09-27",
+      "promised_date": "2026-10-07",
+      "received_date": null,
+      "cancelled_date": null,
+      "order_value_cents": 485545,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO056",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-09-30",
+      "promised_date": "2026-10-04",
+      "received_date": "2026-10-04",
+      "cancelled_date": null,
+      "order_value_cents": 493464,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO057",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-10-03",
+      "promised_date": "2026-10-08",
+      "received_date": "2026-10-06",
+      "cancelled_date": null,
+      "order_value_cents": 51383,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO058",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-10-06",
+      "promised_date": "2026-10-12",
+      "received_date": "2026-10-15",
+      "cancelled_date": null,
+      "order_value_cents": 59302,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO059",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-08-27",
+      "promised_date": "2026-09-03",
+      "received_date": "2026-09-02",
+      "cancelled_date": null,
+      "order_value_cents": 67221,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO060",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-08-30",
+      "promised_date": "2026-09-07",
+      "received_date": null,
+      "cancelled_date": "2026-09-01",
+      "order_value_cents": 75140,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO061",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-08-31",
+      "promised_date": "2026-09-05",
+      "received_date": "2026-09-05",
+      "cancelled_date": null,
+      "order_value_cents": 120000,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO062",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-09-01",
+      "promised_date": "2026-09-05",
+      "received_date": "2026-09-05",
+      "cancelled_date": null,
+      "order_value_cents": 150000,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO063",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-09-30",
+      "promised_date": "2026-10-05",
+      "received_date": "2026-10-05",
+      "cancelled_date": null,
+      "order_value_cents": 260000,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO064",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-10-01",
+      "promised_date": "2026-10-06",
+      "received_date": null,
+      "cancelled_date": null,
+      "order_value_cents": 340000,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO065",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-09-15",
+      "promised_date": "2026-09-30",
+      "received_date": null,
+      "cancelled_date": null,
+      "order_value_cents": 180000,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO066",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-09-16",
+      "promised_date": "2026-09-29",
+      "received_date": null,
+      "cancelled_date": null,
+      "order_value_cents": 220000,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO067",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-09-10",
+      "promised_date": "2026-09-20",
+      "received_date": null,
+      "cancelled_date": "2026-09-12",
+      "order_value_cents": 90000,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO068",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-09-05",
+      "promised_date": "2026-09-15",
+      "received_date": "2026-09-15",
+      "cancelled_date": null,
+      "order_value_cents": 125000,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO069",
+      "supplier_id": "SUP-A",
+      "order_date": "2026-09-06",
+      "promised_date": "2026-09-15",
+      "received_date": "2026-09-14",
+      "cancelled_date": null,
+      "order_value_cents": 175000,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO070",
+      "supplier_id": "SUP-B",
+      "order_date": "2026-09-07",
+      "promised_date": "2026-09-15",
+      "received_date": "2026-09-17",
+      "cancelled_date": null,
+      "order_value_cents": 155000,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO071",
+      "supplier_id": "SUP-C",
+      "order_date": "2026-09-03",
+      "promised_date": "2026-09-20",
+      "received_date": null,
+      "cancelled_date": "2026-10-02",
+      "order_value_cents": 240000,
+      "currency": "USD"
+    },
+    {
+      "order_id": "PO072",
+      "supplier_id": "SUP-D",
+      "order_date": "2026-09-19",
+      "promised_date": "2026-10-02",
+      "received_date": "2026-10-02",
+      "cancelled_date": null,
+      "order_value_cents": 285000,
+      "currency": "USD"
+    }
+  ]
+}
