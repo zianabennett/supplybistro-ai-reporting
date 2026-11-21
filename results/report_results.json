@@ -1,0 +1,154 @@
+{
+  "context": {
+    "period_start": "2026-09-01",
+    "period_end": "2026-10-01",
+    "as_of": "2026-09-30",
+    "period_end_is_exclusive": true,
+    "dataset_order_count": 72,
+    "currency": "USD",
+    "source": "Independent fictional portfolio exercise"
+  },
+  "supplier_order_value": {
+    "rows": [
+      {
+        "supplier_id": "SUP-C",
+        "supplier_label": "Supplier Gamma",
+        "order_count": 12,
+        "order_value_cents": 3486566
+      },
+      {
+        "supplier_id": "SUP-A",
+        "supplier_label": "Supplier Alpha",
+        "order_count": 12,
+        "order_value_cents": 3119834
+      },
+      {
+        "supplier_id": "SUP-D",
+        "supplier_label": "Supplier Delta",
+        "order_count": 9,
+        "order_value_cents": 2438828
+      },
+      {
+        "supplier_id": "SUP-B",
+        "supplier_label": "Supplier Beta",
+        "order_count": 9,
+        "order_value_cents": 2250420
+      }
+    ],
+    "total_order_count": 42,
+    "total_order_value_cents": 11295648
+  },
+  "overdue_orders": {
+    "rows": [
+      {
+        "order_id": "PO001",
+        "supplier_id": "SUP-A",
+        "supplier_label": "Supplier Alpha",
+        "promised_date": "2026-08-30",
+        "days_overdue": 31,
+        "order_value_cents": 57919
+      },
+      {
+        "order_id": "PO031",
+        "supplier_id": "SUP-C",
+        "supplier_label": "Supplier Gamma",
+        "promised_date": "2026-09-05",
+        "days_overdue": 25,
+        "order_value_cents": 295489
+      },
+      {
+        "order_id": "PO049",
+        "supplier_id": "SUP-A",
+        "supplier_label": "Supplier Alpha",
+        "promised_date": "2026-09-13",
+        "days_overdue": 17,
+        "order_value_cents": 438031
+      },
+      {
+        "order_id": "PO019",
+        "supplier_id": "SUP-C",
+        "supplier_label": "Supplier Gamma",
+        "promised_date": "2026-09-14",
+        "days_overdue": 16,
+        "order_value_cents": 200461
+      },
+      {
+        "order_id": "PO007",
+        "supplier_id": "SUP-C",
+        "supplier_label": "Supplier Gamma",
+        "promised_date": "2026-09-16",
+        "days_overdue": 14,
+        "order_value_cents": 105433
+      },
+      {
+        "order_id": "PO071",
+        "supplier_id": "SUP-C",
+        "supplier_label": "Supplier Gamma",
+        "promised_date": "2026-09-20",
+        "days_overdue": 10,
+        "order_value_cents": 240000
+      },
+      {
+        "order_id": "PO037",
+        "supplier_id": "SUP-A",
+        "supplier_label": "Supplier Alpha",
+        "promised_date": "2026-09-22",
+        "days_overdue": 8,
+        "order_value_cents": 343003
+      },
+      {
+        "order_id": "PO010",
+        "supplier_id": "SUP-B",
+        "supplier_label": "Supplier Beta",
+        "promised_date": "2026-09-28",
+        "days_overdue": 2,
+        "order_value_cents": 129190
+      },
+      {
+        "order_id": "PO066",
+        "supplier_id": "SUP-B",
+        "supplier_label": "Supplier Beta",
+        "promised_date": "2026-09-29",
+        "days_overdue": 1,
+        "order_value_cents": 220000
+      }
+    ],
+    "total_order_count": 9,
+    "total_order_value_cents": 2029526
+  },
+  "on_time_delivery": {
+    "rows": [
+      {
+        "supplier_id": "SUP-A",
+        "supplier_label": "Supplier Alpha",
+        "received_order_count": 9,
+        "on_time_order_count": 9,
+        "on_time_rate_pct": 100.0
+      },
+      {
+        "supplier_id": "SUP-B",
+        "supplier_label": "Supplier Beta",
+        "received_order_count": 8,
+        "on_time_order_count": 4,
+        "on_time_rate_pct": 50.0
+      },
+      {
+        "supplier_id": "SUP-C",
+        "supplier_label": "Supplier Gamma",
+        "received_order_count": 7,
+        "on_time_order_count": 7,
+        "on_time_rate_pct": 100.0
+      },
+      {
+        "supplier_id": "SUP-D",
+        "supplier_label": "Supplier Delta",
+        "received_order_count": 7,
+        "on_time_order_count": 4,
+        "on_time_rate_pct": 57.14
+      }
+    ],
+    "received_order_count": 31,
+    "on_time_order_count": 24,
+    "on_time_rate_pct": 77.42
+  }
+}
