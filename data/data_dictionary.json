@@ -2,6 +2,11 @@
   "dataset": "synthetic_purchase_orders.json",
   "grain": "One record per fictional purchase order",
   "currency": "USD",
+  "data_notice": "Named business examples; all orders, amounts, dates and delivery metrics are fictional.",
+  "supplier_fields": [
+    {"name": "supplier_id", "type": "string", "definition": "Stable demonstration identifier SUP-A through SUP-D; not an identifier supplied by a business"},
+    {"name": "supplier_label", "type": "string", "definition": "Public business name used only as an illustrative label; does not establish a real purchase-order relationship"}
+  ],
   "fields": [
     {"name": "order_id", "type": "string", "nullable": false, "definition": "Unique nonempty purchase order identifier"},
     {"name": "supplier_id", "type": "string", "nullable": false, "definition": "Identifier matching a record in the suppliers collection"},
@@ -15,6 +20,9 @@
   "date_convention": "YYYY-MM-DD; period_start inclusive, period_end exclusive, as_of inclusive",
   "as_of_state": "Before order_date the order does not exist. By received_date it is received. By cancelled_date it is cancelled. Otherwise it is open.",
   "empty_rate": "JSON null when there are no eligible received orders",
-  "provenance": "Independently generated fictional data; no employer data or schema"
+  "provenance": "Independently generated fictional operational records with public business names; no employer or client data or schema",
+  "business_context": "Staccato Bakery, Abstinence Spirits and Grow The Earth are publicly listed in SupplyBistro's Cornell Marketplace network. Good Four Season Trading is publicly described by SupplyBistro as an early partner and discovery source; its Cornell affiliation is not established.",
+  "attribution_scope": "The fictional results are not actual client financial impact or evidence that Ziana Bennett worked with each named business.",
+  "business_context_document": "../docs/business-context.md"
 }
 
