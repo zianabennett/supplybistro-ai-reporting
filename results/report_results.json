@@ -6,31 +6,34 @@
     "period_end_is_exclusive": true,
     "dataset_order_count": 72,
     "currency": "USD",
-    "source": "Independent fictional portfolio exercise"
+    "source": "Independent portfolio demonstration with public business names and fictional operational records",
+    "data_notice": "Named business examples; all orders, amounts, dates and delivery metrics are fictional.",
+    "attribution_scope": "The public names are illustrative labels, not actual client financial impact or evidence that Ziana Bennett worked with each business.",
+    "business_context_document": "../docs/business-context.md"
   },
   "supplier_order_value": {
     "rows": [
       {
         "supplier_id": "SUP-C",
-        "supplier_label": "Supplier Gamma",
+        "supplier_label": "Grow The Earth",
         "order_count": 12,
         "order_value_cents": 3486566
       },
       {
         "supplier_id": "SUP-A",
-        "supplier_label": "Supplier Alpha",
+        "supplier_label": "Staccato Bakery",
         "order_count": 12,
         "order_value_cents": 3119834
       },
       {
         "supplier_id": "SUP-D",
-        "supplier_label": "Supplier Delta",
+        "supplier_label": "Good Four Season Trading",
         "order_count": 9,
         "order_value_cents": 2438828
       },
       {
         "supplier_id": "SUP-B",
-        "supplier_label": "Supplier Beta",
+        "supplier_label": "Abstinence Spirits",
         "order_count": 9,
         "order_value_cents": 2250420
       }
@@ -43,7 +46,7 @@
       {
         "order_id": "PO001",
         "supplier_id": "SUP-A",
-        "supplier_label": "Supplier Alpha",
+        "supplier_label": "Staccato Bakery",
         "promised_date": "2026-08-30",
         "days_overdue": 31,
         "order_value_cents": 57919
@@ -51,7 +54,7 @@
       {
         "order_id": "PO031",
         "supplier_id": "SUP-C",
-        "supplier_label": "Supplier Gamma",
+        "supplier_label": "Grow The Earth",
         "promised_date": "2026-09-05",
         "days_overdue": 25,
         "order_value_cents": 295489
@@ -59,7 +62,7 @@
       {
         "order_id": "PO049",
         "supplier_id": "SUP-A",
-        "supplier_label": "Supplier Alpha",
+        "supplier_label": "Staccato Bakery",
         "promised_date": "2026-09-13",
         "days_overdue": 17,
         "order_value_cents": 438031
@@ -67,7 +70,7 @@
       {
         "order_id": "PO019",
         "supplier_id": "SUP-C",
-        "supplier_label": "Supplier Gamma",
+        "supplier_label": "Grow The Earth",
         "promised_date": "2026-09-14",
         "days_overdue": 16,
         "order_value_cents": 200461
@@ -75,7 +78,7 @@
       {
         "order_id": "PO007",
         "supplier_id": "SUP-C",
-        "supplier_label": "Supplier Gamma",
+        "supplier_label": "Grow The Earth",
         "promised_date": "2026-09-16",
         "days_overdue": 14,
         "order_value_cents": 105433
@@ -83,7 +86,7 @@
       {
         "order_id": "PO071",
         "supplier_id": "SUP-C",
-        "supplier_label": "Supplier Gamma",
+        "supplier_label": "Grow The Earth",
         "promised_date": "2026-09-20",
         "days_overdue": 10,
         "order_value_cents": 240000
@@ -91,7 +94,7 @@
       {
         "order_id": "PO037",
         "supplier_id": "SUP-A",
-        "supplier_label": "Supplier Alpha",
+        "supplier_label": "Staccato Bakery",
         "promised_date": "2026-09-22",
         "days_overdue": 8,
         "order_value_cents": 343003
@@ -99,7 +102,7 @@
       {
         "order_id": "PO010",
         "supplier_id": "SUP-B",
-        "supplier_label": "Supplier Beta",
+        "supplier_label": "Abstinence Spirits",
         "promised_date": "2026-09-28",
         "days_overdue": 2,
         "order_value_cents": 129190
@@ -107,7 +110,7 @@
       {
         "order_id": "PO066",
         "supplier_id": "SUP-B",
-        "supplier_label": "Supplier Beta",
+        "supplier_label": "Abstinence Spirits",
         "promised_date": "2026-09-29",
         "days_overdue": 1,
         "order_value_cents": 220000
@@ -120,28 +123,28 @@
     "rows": [
       {
         "supplier_id": "SUP-A",
-        "supplier_label": "Supplier Alpha",
+        "supplier_label": "Staccato Bakery",
         "received_order_count": 9,
         "on_time_order_count": 9,
         "on_time_rate_pct": 100.0
       },
       {
         "supplier_id": "SUP-B",
-        "supplier_label": "Supplier Beta",
+        "supplier_label": "Abstinence Spirits",
         "received_order_count": 8,
         "on_time_order_count": 4,
         "on_time_rate_pct": 50.0
       },
       {
         "supplier_id": "SUP-C",
-        "supplier_label": "Supplier Gamma",
+        "supplier_label": "Grow The Earth",
         "received_order_count": 7,
         "on_time_order_count": 7,
         "on_time_rate_pct": 100.0
       },
       {
         "supplier_id": "SUP-D",
-        "supplier_label": "Supplier Delta",
+        "supplier_label": "Good Four Season Trading",
         "received_order_count": 7,
         "on_time_order_count": 4,
         "on_time_rate_pct": 57.14
