@@ -2,6 +2,8 @@
 
 [Project overview](../README.md)
 
+**Named business examples; fictional records.** The supplier labels use public business names only for the demonstration. All orders, amounts, dates, and delivery metrics are synthetic. The requirements below describe the model, not those businesses' actual operations. [Business context and sources](business-context.md).
+
 ## Goal and shared contract
 
 Create a small report set that a business user can interpret consistently and a technical teammate can validate independently. The fictional model contains one row per purchase order, one currency, and order-level values. Query execution accepts an inclusive period start, an exclusive period end, and an inclusive snapshot date.

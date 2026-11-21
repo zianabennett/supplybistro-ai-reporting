@@ -2,6 +2,8 @@
 
 [Project overview](../README.md)
 
+**Named business examples; fictional records.** Public business names are used as demonstration labels. All order records and calculated financial or delivery measures are synthetic. [Business context and sources](business-context.md) distinguish the three Cornell Marketplace listings from SupplyBistro's separately documented early partner.
+
 ## Reproduce the published example
 
 The repository uses Python 3.9 or later and the standard-library `sqlite3` module. No third-party Python package is required.
@@ -18,7 +20,9 @@ The data is loaded into an in-memory SQLite database for each run. SQL receives 
 
 ## Dataset construction
 
-The fixture contains 60 mechanically generated orders and 12 explicit boundary records, spread across four fictional supplier labels. It includes orders before, during, and after September 2026. The distribution is designed to exercise rules, not to resemble a measured business population. Supplier performance comparisons have no real-world meaning.
+The fixture contains 60 mechanically generated orders and 12 explicit boundary records, spread across four stable supplier IDs. The display labels use Staccato Bakery, Abstinence Spirits, Grow The Earth, and Good Four Season Trading as named business examples. The records include orders before, during, and after September 2026. The distribution is designed to exercise rules, not to resemble a measured business population. Every amount, date, and delivery outcome is fictional; comparisons do not describe those businesses' actual performance.
+
+The label update preserves all 72 order records, the SUP-A through SUP-D identifiers, and the report calculations. Public sources support the business context only. No client records, employer schema, or SupplyBistro/Cornell open-data extract was used, and the mapping does not establish that Ziana Bennett worked with each named business.
 
 | Explicit record | Purpose |
 | --- | --- |

@@ -2,6 +2,8 @@
 
 [Project overview](../README.md)
 
+**Named business examples; fictional records.** The public names provide context for this independent demonstration. Every order and calculated financial or delivery measure is synthetic. The examples do not establish client financial impact or work Ziana Bennett performed for each business. [Business context and sources](business-context.md).
+
 ## Historical direction
 
 SupplyBistro's reporting discussion clarified that AI should help the internal team create canned reports. An interactive customer feature that generated SQL on each request raised a different variable-cost question. The direction discussed at that stage focused on recurring report definitions and the information required to build them.
@@ -19,6 +21,7 @@ The planning sequence included discovery, a prototype with 2–3 reports, a poss
 | Model receipt and cancellation dates | An earlier snapshot should not inherit later status changes | Only this model's simple one-event lifecycle is supported |
 | Use order counts to weight delivery rates | Supplier percentages can have different denominators | Overall reliability must be recomputed from counts |
 | Generate JSON, Markdown, and SVG together | Keep human and machine-readable results consistent | Regeneration updates all output formats from one report object |
+| Use public business names as labeled demonstration examples | Connect the exercise to a documented commercial context | All operational records remain fictional; public relationships and their limits are cited separately |
 
 ## Where AI fits
 
