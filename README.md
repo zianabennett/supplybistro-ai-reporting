@@ -6,6 +6,16 @@ At SupplyBistro, I worked on planning an AI-assisted reporting initiative. A key
 
 This repository develops that direction into an **independent AI-assisted portfolio extension**. The Python, SQL, documentation, and 72 fictional purchase orders were created for this exercise. They are not employer source code, company data, or evidence of a shipped SupplyBistro feature. The historical contribution is the planning context; the executable implementation is new portfolio work.
 
+## My role and the original context
+
+**SupplyBistro · Product planning · 2026**
+
+I translated the reusable-reporting direction into scope, requirements, planning questions, and sprint dependencies. The central product tradeoff was how to make useful reporting repeatable while keeping the cost and build practical. I also presented the product direction to C-suite leadership and a prospective client, which required explaining the value and the choices behind the work.
+
+The report definitions, executable code, and synthetic results in this repository are a new portfolio implementation of that planning problem. They make the reasoning inspectable without claiming that the exercise was deployed at SupplyBistro.
+
+[Portfolio overview](https://zianabennett.github.io/#work) · [Experience and leadership](https://zianabennett.github.io/#experience)
+
 ## What the project delivers
 
 Three reports answer concrete purchasing questions using a consistent set of business definitions. A small Python program loads the fictional data into an in-memory SQLite database and generates the JSON, readable tables, and charts below. It needs no external packages, account, or API key.
